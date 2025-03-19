@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Retos CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        
+        /* Barra de navegación */
+        .nav-principal {
+            background: #2c3e50;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .nav-principal a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-principal a:hover {
+            background: #3498db;
+            transform: translateY(-2px);
+        }
+
+        h1 {
+            color: #333;
+            margin: 40px 0;
+        }
+        
+        .lista-retos {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+        
+        .lista-retos a {
+            display: block;
+            padding: 15px 25px;
+            margin: 10px auto;
+            background: #3498db;
+            color: white;
+            border-radius: 30px;
+            width: 70%;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .lista-retos a:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-principal">
+        <a href="#home">🏠 Inicio</a>
+        <a href="retos/retos_basicos.html">Retos</a>
+    </nav>
+
+    <h1>Bienvenido a los Retos CSS</h1>
+    
+    <ul class="lista-retos">
+        <li><a href="retos/retos_basicos.html">Básicos</a></li>
+        <li><a href="retos/retos_intermedio.html">Intermedios</a></li>
+        <li><a href="retos/retos_avanzados.html">Avanzados</a></li>
+        <li><a href="retos/retos_experto.html">Experto</a></li>
+    </ul>
+</body>
+</html>

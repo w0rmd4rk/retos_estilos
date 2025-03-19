@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Retos CSS Básicos</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .reto {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        /* Estilos para los ejemplos */
+        .ejemplo {
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Reto 1: Elementos impares */
+        .lista-impares li:nth-child(odd) {
+            background-color: #f8f9fa;
+            padding: 5px;
+        }
+
+        /* Reto 2: Elementos pares */
+        .lista-pares li:nth-child(even) {
+            background-color: #e9ecef;
+            padding: 5px;
+        }
+
+        /* Reto 3: Primer y último elemento */
+        .lista-primero-ultimo li:first-child {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .lista-primero-ultimo li:last-child {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        /* Reto 4: Párrafos excepto el primero */
+        .contenedor-parrafos p:not(:first-child) {
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        /* Reto 5: Tercer elemento especial */
+        .lista-tercer-elemento li:nth-child(3) {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        /* Estilos para el código */
+        .codigo {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 10px 0;
+        }
+
+        .volver-inicio {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Retos CSS Básicos</h1>
+
+    <!-- Reto 1 -->
+    <div class="reto">
+        <h2>1. Elementos impares resaltados</h2>
+        <div class="codigo">
+            .lista-impares li:nth-child(odd) {<br>
+            &nbsp;&nbsp;background-color: #f8f9fa;<br>
+            }
+        </div>
+        <div class="ejemplo">
+            <ul class="lista-impares">
+                <li>Elemento 1 (impar)</li>
+                <li>Elemento 2 (par)</li>
+                <li>Elemento 3 (impar)</li>
+                <li>Elemento 4 (par)</li>
+                <li>Elemento 5 (impar)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Reto 2 -->
+    <div class="reto">
+        <h2>2. Elementos pares resaltados</h2>
+        <div class="codigo">
+            .lista-pares li:nth-child(even) {<br>
+            &nbsp;&nbsp;background-color: #e9ecef;<br>
+            }
+        </div>
+        <div class="ejemplo">
+            <ul class="lista-pares">
+                <li>Elemento A (impar)</li>
+                <li>Elemento B (par)</li>
+                <li>Elemento C (impar)</li>
+                <li>Elemento D (par)</li>
+                <li>Elemento E (impar)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Reto 3 -->
+    <div class="reto">
+        <h2>3. Primer y último elemento coloreado</h2>
+        <div class="codigo">
+            .lista-primero-ultimo li:first-child { color: #dc3545; }<br>
+            .lista-primero-ultimo li:last-child { color: #28a745; }
+        </div>
+        <div class="ejemplo">
+            <ul class="lista-primero-ultimo">
+                <li>Primer elemento (rojo)</li>
+                <li>Elemento intermedio 1</li>
+                <li>Elemento intermedio 2</li>
+                <li>Último elemento (verde)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Reto 4 -->
+    <div class="reto">
+        <h2>4. Todos los párrafos excepto el primero</h2>
+        <div class="codigo">
+            .contenedor-parrafos p:not(:first-child) {<br>
+            &nbsp;&nbsp;color: #6c757d;<br>
+            &nbsp;&nbsp;font-style: italic;<br>
+            }
+        </div>
+        <div class="ejemplo">
+            <div class="contenedor-parrafos">
+                <p>Primer párrafo (estilo normal)</p>
+                <p>Segundo párrafo (estilo diferente)</p>
+                <p>Tercer párrafo (estilo diferente)</p>
+                <p>Cuarto párrafo (estilo diferente)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reto 5 -->
+    <div class="reto">
+        <h2>5. Tercer elemento especial</h2>
+        <div class="codigo">
+            .lista-tercer-elemento li:nth-child(3) {<br>
+            &nbsp;&nbsp;color: #ff6b6b;<br>
+            &nbsp;&nbsp;font-weight: bold;<br>
+            }
+        </div>
+        <div class="ejemplo">
+            <ul class="lista-tercer-elemento">
+                <li>Elemento normal</li>
+                <li>Elemento normal</li>
+                <li>¡TERCER ELEMENTO ESPECIAL!</li>
+                <li>Elemento normal</li>
+                <li>Elemento normal</li>
+            </ul>
+        </div>
+    </div>
+
+    <a href="../index.html" class="volver-inicio">Volver al Inicio</a>
+    <a href="retos_intermedio.html"class="volver-inicio">Reto intermedio</a>
+</body>
+</html>

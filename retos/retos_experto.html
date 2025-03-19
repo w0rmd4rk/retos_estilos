@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Retos CSS Expertos</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .reto {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .ejemplo {
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .codigo {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+        }
+
+        /* Reto 16: Primeras tres palabras */
+        .primeras-palabras p {
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .primeras-palabras p::first-letter {
+            font-size: 200%;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-right: 3px;
+        }
+
+        .primeras-palabras p::first-line {
+            color: #2ecc71;
+            font-weight: 500;
+        }
+
+        /* Reto 18: Borde en foco */
+        .input-dinamico input:focus {
+            border: 2px solid #3498db;
+            box-shadow: 0 0 8px rgba(52,152,219,0.3);
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        /* Reto 19: Primer párrafo */
+        .contenedor-primer-p p:first-of-type {
+            background-color: #f9e79f;
+            padding: 15px;
+            border-left: 4px solid #f1c40f;
+        }
+
+        /* Reto 20: Cada tercer elemento */
+        .lista-multiple li:nth-child(3n) {
+            color: #9b59b6;
+            font-weight: bold;
+        }
+
+        /* Estilos adicionales */
+        .volver-inicio {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            width: 250px;
+            transition: all 0.3s ease;
+        }
+    </style>
+    <!-- jQuery para Reto 17 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Reto 17: Resaltar elementos con 'importante'
+            $(".contenido-dinamico :contains('importante')").addClass('resaltado-importante');
+        });
+    </script>
+</head>
+<body>
+    <h1>Retos CSS Expertos</h1>
+
+    <!-- Reto 16 -->
+    <div class="reto">
+        <h2>16. Primeras tres palabras resaltadas</h2>
+        <div class="codigo">
+            p::first-letter { /* Estilo primera letra */ }<br>
+            p::first-line { /* Estilo primera línea */ }
+        </div>
+        <div class="ejemplo">
+            <div class="primeras-palabras">
+                <p>Este es un párrafo de ejemplo donde las primeras palabras deben resaltarse mediante técnicas CSS avanzadas.</p>
+                <p>La combinación de pseudo-elementos permite efectos interesantes en el texto.</p>
+            </div>
+            <small>Nota: Solución aproximada usando first-letter y first-line</small>
+        </div>
+    </div>
+
+    <!-- Reto 17 -->
+    <div class="reto">
+        <h2>17. Elementos con 'importante'</h2>
+        <div class="codigo">
+            $(":contains('importante')").addClass('resaltado');
+        </div>
+        <div class="ejemplo">
+            <div class="contenido-dinamico">
+                <p>Este es un texto normal sin importancia</p>
+                <p>Este contiene información importante que debe resaltarse</p>
+                <div>Elemento con texto importante en div</div>
+                <ul>
+                    <li>Elemento importante en lista</li>
+                    <li>Elemento normal</li>
+                </ul>
+            </div>
+            <small>Usando jQuery para selección por contenido</small>
+        </div>
+    </div>
+
+    <!-- Reto 18 -->
+    <div class="reto">
+        <h2>18. Borde dinámico en foco</h2>
+        <div class="codigo">
+            input:focus {<br>
+            &nbsp;&nbsp;border-color: #3498db;<br>
+            &nbsp;&nbsp;box-shadow: 0 0 8px rgba(52,152,219,0.3);<br>
+            }
+        </div>
+        <div class="ejemplo">
+            <div class="input-dinamico">
+                <input type="text" placeholder="Escribe aquí...">
+                <input type="email" placeholder="Correo electrónico">
+            </div>
+        </div>
+    </div>
+
+    <!-- Reto 19 -->
+    <div class="reto">
+        <h2>19. Primer párrafo resaltado</h2>
+        <div class="codigo">
+            p:first-of-type {<br>
+            &nbsp;&nbsp;background-color: #f9e79f;<br>
+            }
+        </div>
+        <div class="ejemplo">
+            <div class="contenedor-primer-p">
+                <p>Primer párrafo (con estilo especial)</p>
+                <div>Contenido intermedio</div>
+                <p>Segundo párrafo (estilo normal)</p>
+                <p>Tercer párrafo (estilo normal)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reto 20 -->
+    <div class="reto">
+        <h2>20. Cada tercer elemento</h2>
+        <div class="codigo">
+            li:nth-child(3n) {<br>
+            &nbsp;&nbsp;color: #9b59b6;<br>
+            }
+        </div>
+        <div class="ejemplo">
+            <ul class="lista-multiple">
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3 (estilo)</li>
+                <li>Elemento 4</li>
+                <li>Elemento 5</li>
+                <li>Elemento 6 (estilo)</li>
+                <li>Elemento 7</li>
+                <li>Elemento 8</li>
+                <li>Elemento 9 (estilo)</li>
+                <li>Elemento 10</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Estilos adicionales para Reto 17 -->
+    <style>
+        .resaltado-importante {
+            background-color: #f2d7d5;
+            padding: 5px 10px;
+            border-radius: 4px;
+            border: 1px solid #e74c3c;
+            margin: 5px 0;
+        }
+    </style>
+
+    <a href="../index.html" class="volver-inicio">Volver al Inicio</a>
+</body>
+</html>

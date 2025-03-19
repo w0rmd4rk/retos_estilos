@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Retos CSS Avanzados</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .reto {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .ejemplo {
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .codigo {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+        }
+
+        /* Reto 11: Botones deshabilitados */
+        .botones-deshabilitados button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        /* Reto 12: Elementos vacíos */
+        .lista-oculta li:empty {
+            display: none;
+        }
+
+        /* Reto 13: Última celda de tabla */
+        .tabla-ultima-celda td:last-child {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Reto 14: Filas alternas después de la tercera */
+        .tabla-filas-alternas tr:nth-child(n+4):nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        /* Reto 15: Todos excepto último elemento */
+        .lista-excluir-ultimo li:not(:last-child) {
+            color: #E91E63;
+            border-bottom: 1px solid #ddd;
+            padding: 5px 0;
+        }
+
+        /* Estilos adicionales */
+        button {
+            padding: 8px 16px;
+            margin: 5px;
+            border: 1px solid #3498db;
+            border-radius: 4px;
+            background: #e3f2fd;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        button:hover:not(:disabled) {
+            background: #3498db;
+            color: white;
+        }
+
+        .volver-inicio {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Retos CSS Avanzados</h1>
+
+    <!-- Reto 11 -->
+    <div class="reto">
+        <h2>11. Botones deshabilitados</h2>
+        <div class="codigo">
+            button:disabled {
+            &nbsp;&nbsp;opacity: 0.5;
+            &nbsp;&nbsp;cursor: not-allowed;
+            }
+        </div>
+        <div class="ejemplo">
+            <div class="botones-deshabilitados">
+                <button disabled>Deshabilitado</button>
+                <button>Habilitado</button>
+                <button disabled>Otro deshabilitado</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reto 12 -->
+    <div class="reto">
+        <h2>12. Ocultar elementos vacíos</h2>
+        <div class="codigo">
+            li:empty {
+            &nbsp;&nbsp;display: none;
+            }
+        </div>
+        <div class="ejemplo">
+            <ul class="lista-oculta">
+                <li>Elemento visible</li>
+                <li></li>
+                <li>Otro elemento</li>
+                <li><!-- Comentario vacío --></li>
+                <li></li>
+            </ul>
+            <small>Nota: Los elementos li vacíos están ocultos</small>
+        </div>
+    </div>
+
+    <!-- Reto 13 -->
+    <div class="reto">
+        <h2>13. Última celda resaltada</h2>
+        <div class="codigo">
+            td:last-child {
+            &nbsp;&nbsp;background-color: #4CAF50;
+            &nbsp;&nbsp;color: white;
+            }
+        </div>
+        <div class="ejemplo">
+            <table class="tabla-ultima-celda">
+                <tr>
+                    <th>Producto</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td>Laptop</td>
+                    <td>Electrónicos</td>
+                    <td>$1200</td>
+                </tr>
+                <tr>
+                    <td>Libro</td>
+                    <td>Educación</td>
+                    <td>$45</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Reto 14 -->
+    <div class="reto">
+        <h2>14. Filas alternas desde la 4ta</h2>
+        <div class="codigo">
+            tr:nth-child(n+4):nth-child(even) {
+            &nbsp;&nbsp;background-color: #f5f5f5;
+            }
+        </div>
+        <div class="ejemplo">
+            <table class="tabla-filas-alternas">
+                <tr><th>ID</th><th>Nombre</th><th>Puntaje</th></tr>
+                <tr><td>1</td><td>Ana</td><td>95</td></tr>
+                <tr><td>2</td><td>Luis</td><td>88</td></tr>
+                <tr><td>3</td><td>Marta</td><td>92</td></tr>
+                <tr><td>4</td><td>Pedro</td><td>78</td></tr>
+                <tr><td>5</td><td>Sofía</td><td>85</td></tr>
+                <tr><td>6</td><td>Carlos</td><td>90</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Reto 15 -->
+    <div class="reto">
+        <h2>15. Todos excepto el último</h2>
+        <div class="codigo">
+            li:not(:last-child) {
+            &nbsp;&nbsp;color: #E91E63;
+            &nbsp;&nbsp;border-bottom: 1px solid #ddd;
+            }
+        </div>
+        <div class="ejemplo">
+            <ul class="lista-excluir-ultimo">
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+                <li>Último elemento (sin estilo)</li>
+            </ul>
+        </div>
+    </div>
+
+    <a href="../index.html" class="volver-inicio">Volver al Inicio</a>
+    <a href="retos_experto.html"class="volver-inicio">Reto experto</a>
+
+</body>
+</html>

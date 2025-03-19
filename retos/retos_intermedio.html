@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Retos CSS Intermedios</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .reto {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .ejemplo {
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .codigo {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+        }
+
+        /* Reto 6: Campos requeridos */
+        .formulario-req input:required {
+            border: 2px solid #dc3545;
+            padding: 8px;
+            margin: 5px 0;
+            width: 250px;
+        }
+
+        /* Reto 7: Enlaces visitados y hover */
+        .enlaces-estilo a:visited {
+            color: #6f42c1;
+        }
+        .enlaces-estilo a:hover {
+            color: #fd7e14;
+            text-decoration: underline;
+        }
+
+        /* Reto 8: Segunda columna tabla */
+        .tabla-segunda-columna td:nth-child(2) {
+            background-color: #e3f2fd;
+            font-weight: bold;
+        }
+
+        /* Reto 9: Párrafos con enlaces */
+        .contenedor-enlaces p:has(a) {
+            background-color: #fff3cd;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        /* Reto 10: Elementos impares en contenedor */
+        .contenedor-impares div:nth-child(odd) {
+            background-color: #f8f9fa;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        .volver-inicio {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Retos CSS Intermedios</h1>
+
+    <!-- Reto 6 -->
+    <div class="reto">
+        <h2>6. Campos requeridos con borde rojo</h2>
+        <div class="codigo">
+            input:required {<br>
+            &nbsp;&nbsp;border: 2px solid #dc3545;<br>
+            }
+        </div>
+        <div class="ejemplo">
+            <form class="formulario-req">
+                <input type="text" placeholder="Nombre (requerido)" required><br>
+                <input type="email" placeholder="Email (requerido)" required><br>
+                <input type="tel" placeholder="Teléfono (opcional)">
+            </form>
+        </div>
+    </div>
+
+    <!-- Reto 7 -->
+    <div class="reto">
+        <h2>7. Estados de enlaces</h2>
+        <div class="codigo">
+            a:visited { color: #6f42c1; }<br>
+            a:hover { color: #fd7e14; }
+        </div>
+        <div class="ejemplo">
+            <div class="enlaces-estilo">
+                <a href="#visitado">Enlace visitado</a><br>
+                <a href="https://ejemplo.com">Enlace no visitado</a>
+            </div>
+            <small>Nota: El enlace visitado debe haber sido clickeado previamente</small>
+        </div>
+    </div>
+
+    <!-- Reto 8 -->
+    <div class="reto">
+        <h2>8. Segunda columna resaltada</h2>
+        <div class="codigo">
+            td:nth-child(2) {<br>
+            &nbsp;&nbsp;background-color: #e3f2fd;<br>
+            }
+        </div>
+        <div class="ejemplo">
+            <table class="tabla-segunda-columna">
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                </tr>
+                <tr>
+                    <td>Laptop</td>
+                    <td>$1200</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Teléfono</td>
+                    <td>$800</td>
+                    <td>30</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Reto 9 -->
+    <div class="reto">
+        <h2>9. Párrafos con enlaces</h2>
+        <div class="codigo">
+            p:has(a) {<br>
+            &nbsp;&nbsp;background-color: #fff3cd;<br>
+            }
+        </div>
+        <div class="ejemplo">
+            <div class="contenedor-enlaces">
+                <p>Párrafo normal sin enlaces</p>
+                <p>Párrafo con <a href="#">enlace importante</a></p>
+                <p>Otro párrafo <span>sin enlace</span></p>
+                <p>Último párrafo con <a href="#">enlace</a></p>
+            </div>
+            <small>Nota: El selector :has() requiere navegador moderno</small>
+        </div>
+    </div>
+
+    <!-- Reto 10 -->
+    <div class="reto">
+        <h2>10. Elementos impares en contenedor</h2>
+        <div class="codigo">
+            .contenedor div:nth-child(odd) {<br>
+            &nbsp;&nbsp;background-color: #f8f9fa;<br>
+            }
+        </div>
+        <div class="ejemplo">
+            <div class="contenedor-impares">
+                <div>Elemento 1 (impar)</div>
+                <div>Elemento 2 (par)</div>
+                <div>Elemento 3 (impar)</div>
+                <div>Elemento 4 (par)</div>
+                <div>Elemento 5 (impar)</div>
+            </div>
+        </div>
+    </div>
+
+    <a href="../index.html" class="volver-inicio">Volver al Inicio</a>
+    <a href="retos_avanzados.html"class="volver-inicio">Reto avanzados</a>
+
+</body>
+</html>
