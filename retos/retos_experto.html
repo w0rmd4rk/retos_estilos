@@ -3,104 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Retos CSS Expertos</title>
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-
-        .reto {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-
-        .ejemplo {
-            padding: 15px;
-            margin: 15px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .codigo {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            font-family: 'Courier New', monospace;
-            margin: 10px 0;
-        }
-
-        /* Reto 16: Primeras tres palabras */
-        .primeras-palabras p {
-            position: relative;
-            line-height: 1.6;
-        }
-
-        .primeras-palabras p::first-letter {
-            font-size: 200%;
-            color: #e74c3c;
-            font-weight: bold;
-            margin-right: 3px;
-        }
-
-        .primeras-palabras p::first-line {
-            color: #2ecc71;
-            font-weight: 500;
-        }
-
-        /* Reto 18: Borde en foco */
-        .input-dinamico input:focus {
-            border: 2px solid #3498db;
-            box-shadow: 0 0 8px rgba(52,152,219,0.3);
-            outline: none;
-            transition: all 0.3s ease;
-        }
-
-        /* Reto 19: Primer párrafo */
-        .contenedor-primer-p p:first-of-type {
-            background-color: #f9e79f;
-            padding: 15px;
-            border-left: 4px solid #f1c40f;
-        }
-
-        /* Reto 20: Cada tercer elemento */
-        .lista-multiple li:nth-child(3n) {
-            color: #9b59b6;
-            font-weight: bold;
-        }
-
-        /* Estilos adicionales */
-        .volver-inicio {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-
-        input {
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            width: 250px;
-            transition: all 0.3s ease;
-        }
-    </style>
-    <!-- jQuery para Reto 17 -->
+    <link rel="stylesheet" href="../estilos/style_experto.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -110,7 +13,7 @@
     </script>
 </head>
 <body>
-    <h1>Retos CSS Expertos</h1>
+    <h1 id="inicio">Retos CSS Expertos</h1>
 
     <!-- Reto 16 -->
     <div class="reto">
@@ -207,17 +110,14 @@
         </div>
     </div>
 
-    <!-- Estilos adicionales para Reto 17 -->
-    <style>
-        .resaltado-importante {
-            background-color: #f2d7d5;
-            padding: 5px 10px;
-            border-radius: 4px;
-            border: 1px solid #e74c3c;
-            margin: 5px 0;
-        }
-    </style>
+    <!-- Contenedor de los botones de navegación -->
+    <div class="botones-navegacion">
+        <!-- Botón para ir a los retos avanzados -->
+        <a href="retos_avanzados.html" class="boton">Retos avanzados</a>
+         <!-- Botón para volver al principio de la página-->
+         <a href="#inicio" class="boton">inicio</a>
+        <!-- Botón para ir a los retos intermedios -->
+        <a href="../index.html" class="boton">Pagina principal</a>
 
-    <a href="../index.html" class="volver-inicio">Volver al Inicio</a>
 </body>
 </html>

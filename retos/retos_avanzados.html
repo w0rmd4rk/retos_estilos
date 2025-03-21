@@ -3,105 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Retos CSS Avanzados</title>
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-
-        .reto {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-
-        .ejemplo {
-            padding: 15px;
-            margin: 15px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .codigo {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            font-family: 'Courier New', monospace;
-            margin: 10px 0;
-        }
-
-        /* Reto 11: Botones deshabilitados */
-        .botones-deshabilitados button:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transform: none !important;
-        }
-
-        /* Reto 12: Elementos vacíos */
-        .lista-oculta li:empty {
-            display: none;
-        }
-
-        /* Reto 13: Última celda de tabla */
-        .tabla-ultima-celda td:last-child {
-            background-color: #4CAF50;
-            color: white;
-            font-weight: bold;
-        }
-
-        /* Reto 14: Filas alternas después de la tercera */
-        .tabla-filas-alternas tr:nth-child(n+4):nth-child(even) {
-            background-color: #f5f5f5;
-        }
-
-        /* Reto 15: Todos excepto último elemento */
-        .lista-excluir-ultimo li:not(:last-child) {
-            color: #E91E63;
-            border-bottom: 1px solid #ddd;
-            padding: 5px 0;
-        }
-
-        /* Estilos adicionales */
-        button {
-            padding: 8px 16px;
-            margin: 5px;
-            border: 1px solid #3498db;
-            border-radius: 4px;
-            background: #e3f2fd;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        button:hover:not(:disabled) {
-            background: #3498db;
-            color: white;
-        }
-
-        .volver-inicio {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="../estilos/style_avanzados.css">
 </head>
 <body>
-    <h1>Retos CSS Avanzados</h1>
+    <h1 id="inicio">Retos CSS Avanzados</h1>
 
     <!-- Reto 11 -->
     <div class="reto">
@@ -211,8 +116,16 @@
         </div>
     </div>
 
-    <a href="../index.html" class="volver-inicio">Volver al Inicio</a>
-    <a href="retos_experto.html"class="volver-inicio">Reto experto</a>
+    <!-- Contenedor de los botones de navegación -->
+<div class="botones-navegacion">
+    <!-- Botón para ir a los retos avanzados -->
+    <a href="retos_intermedio.html" class="boton">Retos intermedios</a>
+     <!-- Botón para volver al principio de la página-->
+     <a href="#inicio" class="boton">inicio</a>
+    <!-- Botón para ir a los retos intermedios -->
+    <a href="retos_experto.html" class="boton">Retos Experto</a>
+
+</div>
 
 </body>
 </html>

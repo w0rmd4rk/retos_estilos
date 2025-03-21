@@ -3,94 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Retos CSS Básicos</title>
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-
-        .reto {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-
-        /* Estilos para los ejemplos */
-        .ejemplo {
-            padding: 15px;
-            margin: 15px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        /* Reto 1: Elementos impares */
-        .lista-impares li:nth-child(odd) {
-            background-color: #f8f9fa;
-            padding: 5px;
-        }
-
-        /* Reto 2: Elementos pares */
-        .lista-pares li:nth-child(even) {
-            background-color: #e9ecef;
-            padding: 5px;
-        }
-
-        /* Reto 3: Primer y último elemento */
-        .lista-primero-ultimo li:first-child {
-            color: #dc3545;
-            font-weight: bold;
-        }
-        .lista-primero-ultimo li:last-child {
-            color: #28a745;
-            font-weight: bold;
-        }
-
-        /* Reto 4: Párrafos excepto el primero */
-        .contenedor-parrafos p:not(:first-child) {
-            color: #6c757d;
-            font-style: italic;
-        }
-
-        /* Reto 5: Tercer elemento especial */
-        .lista-tercer-elemento li:nth-child(3) {
-            color: #ff6b6b;
-            font-weight: bold;
-        }
-
-        /* Estilos para el código */
-        .codigo {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            font-family: 'Courier New', Courier, monospace;
-            margin: 10px 0;
-        }
-
-        .volver-inicio {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="../estilos/style_basicos.css">
 </head>
 <body>
-    <h1>Retos CSS Básicos</h1>
+    <h1 id="inicio">Retos CSS Básicos</h1>
 
     <!-- Reto 1 -->
     <div class="reto">
@@ -185,8 +101,11 @@
             </ul>
         </div>
     </div>
-
-    <a href="../index.html" class="volver-inicio">Volver al Inicio</a>
-    <a href="retos_intermedio.html"class="volver-inicio">Reto intermedio</a>
+    <div class="botones-navegacion">
+        <a href="../index.html" class="boton">Pagina principal</a>
+        <a href="#inicio" class="boton">inicio</a>
+        <a href="retos_intermedio.html" class="boton">Retos intermedios</a>
+    </div>
+    
 </body>
 </html>

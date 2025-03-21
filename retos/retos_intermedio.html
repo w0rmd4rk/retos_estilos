@@ -3,103 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Retos CSS Intermedios</title>
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-
-        .reto {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-
-        .ejemplo {
-            padding: 15px;
-            margin: 15px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .codigo {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            font-family: 'Courier New', monospace;
-            margin: 10px 0;
-        }
-
-        /* Reto 6: Campos requeridos */
-        .formulario-req input:required {
-            border: 2px solid #dc3545;
-            padding: 8px;
-            margin: 5px 0;
-            width: 250px;
-        }
-
-        /* Reto 7: Enlaces visitados y hover */
-        .enlaces-estilo a:visited {
-            color: #6f42c1;
-        }
-        .enlaces-estilo a:hover {
-            color: #fd7e14;
-            text-decoration: underline;
-        }
-
-        /* Reto 8: Segunda columna tabla */
-        .tabla-segunda-columna td:nth-child(2) {
-            background-color: #e3f2fd;
-            font-weight: bold;
-        }
-
-        /* Reto 9: Párrafos con enlaces */
-        .contenedor-enlaces p:has(a) {
-            background-color: #fff3cd;
-            padding: 10px;
-            border-radius: 4px;
-        }
-
-        /* Reto 10: Elementos impares en contenedor */
-        .contenedor-impares div:nth-child(odd) {
-            background-color: #f8f9fa;
-            padding: 10px;
-            margin: 5px 0;
-        }
-
-        .volver-inicio {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="../estilos/style_intermedio.css">
 </head>
 <body>
-    <h1>Retos CSS Intermedios</h1>
+    <h1 id="inicio">Retos CSS Intermedios</h1>
 
     <!-- Reto 6 -->
     <div class="reto">
         <h2>6. Campos requeridos con borde rojo</h2>
         <div class="codigo">
-            input:required {<br>
-            &nbsp;&nbsp;border: 2px solid #dc3545;<br>
-            }
+            input:required { border: 2px solid #dc3545; }
         </div>
         <div class="ejemplo">
             <form class="formulario-req">
@@ -130,9 +43,7 @@
     <div class="reto">
         <h2>8. Segunda columna resaltada</h2>
         <div class="codigo">
-            td:nth-child(2) {<br>
-            &nbsp;&nbsp;background-color: #e3f2fd;<br>
-            }
+            td:nth-child(2) { background-color: #e3f2fd; }
         </div>
         <div class="ejemplo">
             <table class="tabla-segunda-columna">
@@ -159,9 +70,7 @@
     <div class="reto">
         <h2>9. Párrafos con enlaces</h2>
         <div class="codigo">
-            p:has(a) {<br>
-            &nbsp;&nbsp;background-color: #fff3cd;<br>
-            }
+            p:has(a) { background-color: #fff3cd; }
         </div>
         <div class="ejemplo">
             <div class="contenedor-enlaces">
@@ -178,9 +87,7 @@
     <div class="reto">
         <h2>10. Elementos impares en contenedor</h2>
         <div class="codigo">
-            .contenedor div:nth-child(odd) {<br>
-            &nbsp;&nbsp;background-color: #f8f9fa;<br>
-            }
+            .contenedor div:nth-child(odd) { background-color: #f8f9fa; }
         </div>
         <div class="ejemplo">
             <div class="contenedor-impares">
@@ -193,8 +100,17 @@
         </div>
     </div>
 
-    <a href="../index.html" class="volver-inicio">Volver al Inicio</a>
-    <a href="retos_avanzados.html"class="volver-inicio">Reto avanzados</a>
+    
+    <!-- Contenedor de los botones de navegación -->
+<div class="botones-navegacion">
+    <!-- Botón para volver a la página de retos basicos-->
+    <a href="retos_basicos.html" class="boton">Retos Basicos</a>
+
+    <!-- Botón para volver al principio de la página-->
+    <a href="#inicio" class="boton">inicio</a>
+    <!-- Botón para ir a los retos avanzados -->
+    <a href="retos_avanzados.html" class="boton">Retos Avanzados</a>
+</div>
 
 </body>
 </html>
